@@ -72,8 +72,8 @@ export const DonationConnectionProvider = ({ children }) => {
       
     const donate = async (pId, amount) => {
         const web3modal = new Web3Modal();
-        const connection = await web3modal.connect();
-        const provider = ethers.providers.Web3Provider(connection);
+        const connection = await new web3modal.connect();
+        const provider = new ethers.providers.Web3Provider(connection);
         const signer = provider.getSigner();
         const contract = fetchContract(signer);
 

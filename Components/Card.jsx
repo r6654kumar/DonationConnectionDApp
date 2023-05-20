@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ allCampaigns, setOpenModel, setDonateCampaign, title }) => {
+const Card = ({ allCampaigns, setOpenModel, setDonate, title }) => {
   console.log(allCampaigns);
   const daysleft = (deadline) => {
     const difference = new Date(deadline).getTime() - Date.now();
